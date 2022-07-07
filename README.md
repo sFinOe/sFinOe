@@ -3,7 +3,7 @@
 ## WebServer Developer
 I'm interested in all kind of programming languages i do marketing and other things!
 
-::marker 📍 I'm based in Khouribga
+li::marker 📍 I'm based in Khouribga
 ::marker ✉️ You can contact me at zakkikasmi@gmail.com
 
 ### 42 Profile
