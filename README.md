@@ -3,8 +3,8 @@
 ## WebServer Developer
 I'm interested in all kind of programming languages i do marketing and other things!
 
-li::marker 📍 I'm based in Khouribga
-::marker ✉️ You can contact me at zakkikasmi@gmail.com
+- 📍 I'm based in Khouribga
+- ✉️ You can contact me at zakkikasmi@gmail.com
 
 ### 42 Profile
 [![zkasmi's 42 stats](https://badge.mediaplus.ma/darkblue/zkasmi)](https://github.com/oakoudad/badge42)
