@@ -1,5 +1,4 @@
 <h1 align="center">Hi 👋, I'm Zakaria Kasmi</h1>
-<h3 align="center">A Full Stack, Mobile Dev</h3>
 
 
 
