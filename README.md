@@ -8,35 +8,45 @@
 
 using namespace std
 
-int main ()
-{
-    cout << "Launching New HTTP Connection !!!" << endl;
+int main() {
+    std::cout << "Launching New HTTP Connection!!!" << std::endl;
 
-    int socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock < 0)
+    int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (serverSocket < 0)
         _error(errno);
-    sockaddr_in addr;
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = host;
-    addr.sin_port = htons("127.0.0.1");
-    memset(&(addr.sin_zero), '\0', 8);
-    if (setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0)
-        _error(errno);
-    if (bind(sock, (sockaddr*)&addr, sizeof(addr)) < 0)
-        _error(errno);
-    if (listen(sock, -1) < 0)
-        _error(errno);
-    
-    cout << "Waiting For Connection !!!" << endl;   
 
-    int client_fd;
+    int optval = 1;
+    if (setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0)
+        _error(errno);
 
-    if ((client_fd = accept(fds[i].fd, NULL, NULL)) < 0)
-        throw AcceptException();
-    
-    send(client_fd, "Welcome To My Profile <3", 26, 0);
+    sockaddr_in serverAddress;
+    serverAddress.sin_family = AF_INET;
+    serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1");
+    serverAddress.sin_port = htons(3000);
+    memset(&(serverAddress.sin_zero), '\0', 8);
 
-    cout << "Thx For Visiting My Profile" << endl;
+    if (bind(serverSocket, reinterpret_cast<sockaddr*>(&serverAddress), sizeof(serverAddress)) < 0)
+        _error(errno);
+
+    if (listen(serverSocket, SOMAXCONN) < 0)
+        _error(errno);
+
+    std::cout << "Waiting For Connection!!!" << std::endl;
+
+    sockaddr_in clientAddress;
+    socklen_t clientAddressSize = sizeof(clientAddress);
+    int clientSocket = accept(serverSocket, reinterpret_cast<sockaddr*>(&clientAddress), &clientAddressSize);
+    if (clientSocket < 0)
+        _error(errno);
+
+    send(clientSocket, "Welcome To My Profile <3", 26, 0);
+
+    std::cout << "Thanks For Visiting My Profile" << std::endl;
+
+    close(clientSocket);
+    close(serverSocket);
+
+    return 0;
 }
 ```
 
