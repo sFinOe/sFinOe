@@ -100,8 +100,9 @@ int main() {
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=sfinoe&show_icons=true&locale=en&layout=compact" alt="sfinoe" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sfinoe&show_icons=true&locale=en" alt="sfinoe" /></p>
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs?username=sfinoe&show_icons=true&theme=prussian&layout=compact)
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sfinoe&" alt="sfinoe" /></p>
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=sfinoe&show_icons=true&theme=prussian)
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=sfinoe&theme=prussian&border_radius=4)](https://git.io/streak-stats)
